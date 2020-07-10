@@ -14,9 +14,9 @@ public interface IUserDao
 
 	boolean WithdrawAmount(int accountno, double accbalance);
 
-	double checkbalance(int accountno);
+	double checkbalance(int accno);
 
-	List<Transaction> TransactionDetails(int accountno);
+	List<Transaction> TransactionDetails(int accno);
 
 	void PasswordChange(int accountno,String password);
 

@@ -9,8 +9,8 @@
 <body>
 
 <form action="Users">
-     Enter Accountno to get ministatement<input type="text" name="Accountno"><br>
-          <input type="submit">
+ 
+          <input type="submit" name="text" value="mini-statement">
 </form>
 
 </body>

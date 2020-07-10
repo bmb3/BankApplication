@@ -8,7 +8,6 @@
 </head>
 <body>
     <form action="Users">
-   Enter Accountno to check balance<input type="text" name="Accountno"><br>
    <input type="submit" name="btn" value="checkbalance">
    </form>
 

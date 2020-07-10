@@ -138,8 +138,8 @@ public class UsersServlet extends HttpServlet
 			  
 		else if(action.equals("checkbalance"))
 		{
-			int Accountno=Integer.parseInt(request.getParameter("Accountno"));
-			double b=userservice.checkbalance(Accountno);
+			//int Accountno=Integer.parseInt(request.getParameter("Accountno"));
+			double b=userservice.checkbalance(accno);
 			try {
 				PrintWriter pwt=response.getWriter();
 				 pwt.println("Account balance is = " + b);
@@ -170,8 +170,8 @@ public class UsersServlet extends HttpServlet
 			  
 		else 
 		{
-			int accountno=Integer.parseInt(request.getParameter("Accountno"));
-			List<Transaction> list=userservice.TransactionDetails(accountno);
+			//int accountno=Integer.parseInt(request.getParameter("Accountno"));
+			List<Transaction> list=userservice.TransactionDetails(accno);
 			session.setAttribute("list", list);
 			response.sendRedirect("TransactionDetails.jsp");
 	}

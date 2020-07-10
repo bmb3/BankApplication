@@ -36,14 +36,14 @@ public class UserServiceImpl implements IUserService
 	}
 
 	@Override
-	public double checkbalance(int accountno) {
-		return dao.checkbalance(accountno);
+	public double checkbalance(int accno) {
+		return dao.checkbalance(accno);
 	}
 
 	@Override
-	public List<Transaction> TransactionDetails(int accountno) {
+	public List<Transaction> TransactionDetails(int accno) {
 	
-		return dao.TransactionDetails(accountno);
+		return dao.TransactionDetails(accno);
 	}
 
 	@Override

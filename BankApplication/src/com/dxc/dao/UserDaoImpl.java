@@ -132,7 +132,7 @@ public class UserDaoImpl implements IUserDao {
 		
 		
 		@Override
-		public double checkbalance(int accountno)
+		public double checkbalance(int accno)
 		{
 			double Accbalance=0;
 			Statement stmt;
@@ -141,7 +141,7 @@ public class UserDaoImpl implements IUserDao {
 				ResultSet rs=stmt.executeQuery("select * from usersdetails");
 				while(rs.next())
 				{
-					if(accountno==rs.getInt(1))
+					if(accno==rs.getInt(1))
 					{
 						Accbalance=rs.getDouble(3);
 					}
@@ -154,14 +154,14 @@ public class UserDaoImpl implements IUserDao {
 		}
 		
 		@Override
-		public List<Transaction> TransactionDetails(int accountno) {
+		public List<Transaction> TransactionDetails(int accno) {
 			List<Transaction> list=new ArrayList<>();
 			try {
 				Statement stmt=conn.createStatement();
 				ResultSet rs=stmt.executeQuery("select * from transctiondetails");
 				while(rs.next())
 				{
-					if(accountno==rs.getInt(1))
+					if(accno==rs.getInt(1))
 					{
 					list.add(new Transaction(rs.getInt(1),rs.getString(2),rs.getDouble(3)));
 					}
